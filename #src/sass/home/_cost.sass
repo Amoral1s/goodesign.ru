@@ -1,0 +1,73 @@
+@import "../reset/_vars"
+
+.cost
+  .title
+    margin-bottom: 30px
+    min-width: 840px
+  .subtitle
+    max-width: 440px
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-right
+    width: 1080px
+    height: 700px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &-left
+    width: calc(100% - 1080px)
+    display: block
+    padding-top: 100px
+    z-index: 10
+    .button
+      margin-bottom: 50px
+
+@media (max-width: 1670px)     
+  .cost
+    &-right
+      width: 630px
+      height: 450px
+    &-left
+      width: calc(100% - 630px)
+      display: block
+      padding-top: 50px
+      .button
+        margin-bottom: 40px
+
+@media (max-width: 1200px)     
+  .cost
+    &-right
+      width: 550px
+      height: 450px
+    &-left
+      width: calc(100% - 550px)
+      display: block
+      padding-top: 50px
+      .button
+        margin-bottom: 40px
+@media (max-width: 992px)     
+  .cost
+    padding-bottom: 70px
+    .title
+      min-width: 0
+    &-right
+      display: none
+    &-left
+      width: 100%
+      padding-top: 0px
+      p
+        max-width: 400px
+      .button
+        margin-bottom: 40px
+
+@media (max-width: 578px)
+  .cost
+    .title
+      margin-bottom: 15px
+    .subtitle
+      margin-bottom: 30px
+      
+

@@ -1,0 +1,324 @@
+@import "./reset/_vars"
+@import "./reset/_reset"
+
+
+
+.header
+  padding: 80px 0
+  position: relative
+  .burger
+    display: none
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-logo
+    img
+      display: block
+      object-fit: contain
+  &-nav
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    ul
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      li
+        a
+          color: #fff
+          transition: .2s
+          margin-left: 60px
+          &:hover
+            transition: .2s
+            color: $main
+    &-phone
+      color: $main
+      transition: .2s
+      position: relative
+      color: $main
+      margin-left: 60px
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        bottom: -3px
+        left: 0
+        transition: .2s
+        background-color: $main
+        width: 0%
+      &:hover
+        transition: .2s
+        color: #fff
+        &::after
+          transition: .2s
+          width: 100%
+    &-lang
+      margin-left: 60px
+      cursor: pointer
+      &-item
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        p
+          display: block
+          margin: 0 3px 0 5px
+
+.offer
+  position: relative
+  padding-top: 50px
+  padding-bottom: 170px
+  z-index: 10
+  &-bg
+    position: absolute
+    left: 0
+    top: 0
+  &-thumbnail
+    position: relative
+    p
+      position: absolute
+      bottom: 30px
+      left: 30px
+      max-width: 330px
+      line-height: 1.5
+  &-title
+    margin-bottom: 90px
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    position: relative
+    z-index: 10
+    p
+      color: $main
+      font-size: 24px
+      line-height: 1.5
+      max-width: 320px
+      text-align: end
+      margin-bottom: 10px
+    h1
+      font-size: 64px
+      max-width: 981px
+
+@media (max-width: 1670px)
+  body
+    font-size: 18px
+  .header
+    padding: 60px 0
+    &-nav
+      &-phone,
+      &-lang
+        margin-left: 40px
+      ul
+        li
+          a
+            margin-left: 40px
+    &-logo
+      picture, img
+        max-width: 200px
+        object-fit: contain
+
+  .offer
+    h1
+      font-size: 48px
+    &-title
+      p
+        font-size: 20px
+
+@media (max-width: 1200px)
+  body
+    font-size: 18px
+  .header
+    padding: 40px 0
+    &-nav
+      &-phone,
+      &-lang
+        margin-left: 25px
+      ul
+        li
+          a
+            margin-left: 25px
+    &-logo
+      picture, img
+        max-width: 200px
+        object-fit: contain
+
+  .offer
+    h1
+      font-size: 42px
+    &-title
+      p
+        font-size: 18px
+
+@media (max-width: 992px)
+  
+  section
+    padding-bottom: 80px
+  .header
+    padding: 20px 0
+    position: absolute
+    background-color: $dark
+    z-index: 100
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    transition: .2s
+    &-logo
+      img
+        max-width: 136px
+        transition: .2s
+    .burger
+      display: block
+      width: 30px
+      height: 20px
+      position: relative
+      span
+        height: 2px
+        width: 30px
+        background-color: $main
+        position: absolute
+        top: 0
+        left: 0
+        transition: .2s
+        &:nth-child(2)
+          top: 9px
+        &:nth-child(3)
+          top: 18px
+      &-active
+        span
+          transform: rotate(45deg)
+          top: 8px
+          left: 0
+          transition: .2s
+          &:nth-child(2)
+            transform: rotate(-135deg)
+            top: 8px
+            left: 0
+          &:nth-child(3)
+            transform: rotate(-45deg)
+            top: 8px
+            left: 0
+    &-nav
+      display: none
+      position: fixed
+      top: 95px
+      left: 0
+      right: 0
+      overflow-y: auto
+      height: 100%
+      width: 100%
+      background-color: $accent
+      padding: 40px 20px
+      ul
+        display: block
+        margin-bottom: 60px
+        li
+          a
+            font-size: 22px
+            margin-bottom: 30px
+            display: block
+            width: max-content
+      &-phone 
+        font-size: 28px
+        display: block
+      &-lang
+        position: absolute
+        top: 20px
+        right: 25px
+        z-index: 110
+        &-item
+          align-items: center
+          picture
+            display: flex
+
+  .header-active
+    top: -100px
+    position: fixed
+    padding-top: 10px
+    padding-bottom: 10px
+    transition: .2s
+    animation-name: header
+    animation-duration: 1s
+    animation-fill-mode: forwards
+    .header-nav
+      top: 52px
+    .header-logo
+      img
+        width: 100px
+        transition: .2s
+
+  @keyframes header 
+    0% 
+      top: -100px
+    100% 
+      top: 0px
+
+  .offer
+    padding-bottom: 80px
+    padding-top: 0px
+    margin-top: 170px
+    &-title
+      display: block
+      p
+        text-align: start
+        margin-top: 10px
+
+@media (max-width: 768px)
+  
+  .offer
+    &-title
+      h1
+        font-size: 34px
+      p
+        font-size: 18px
+@media (max-width: 578px)
+  .header
+    padding-top: 15px
+    padding-bottom: 15px
+    &-nav
+      padding-left: 15px
+      padding-top: 30px
+      &-lang
+        position: static
+        display: block
+        margin-left: 0
+        margin-top: 20px
+        &-item
+          justify-content: flex-start
+      &-phone
+        font-size: 22px
+        margin: 0
+      ul
+        li
+          a
+            margin: 0
+            margin-bottom: 20px
+            font-size: 20px
+    &-active
+      padding-top: 5px
+      padding-bottom: 5px
+      .header-logo
+        img,picture
+          width: 100px
+  
+  .offer
+    margin-top: 130px
+    padding-top: 0
+    padding-bottom: 85px
+    &-thumbnail
+      picture, img
+        height: 240px
+        width: 100%
+        object-fit: cover
+      p
+        font-size: 12px
+        left: 10px
+        bottom: 10px
+        max-width: 210px
+    &-title
+      margin-bottom: 20px
+      h1
+        font-size: 22px
+      p
+        font-size: 16px

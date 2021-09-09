@@ -1,0 +1,123 @@
+@import "../reset/_vars"
+
+.ethaps
+  overflow: hidden
+  &-bg
+    position: absolute
+    z-index: -1
+    left: 0
+    top: 300px
+  .title
+    margin-bottom: 10px
+    &::after
+      left: 100px
+      bottom: -10px
+  .subtitle
+    margin-bottom: 80px
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-left
+    width: 600px
+    position: relative
+    img
+      width: 100%
+  &-right
+    width: calc(100% - 600px)
+    padding-left: 120px
+    &-item
+      margin-bottom: 30px
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      &-content
+        h3
+          font-family: $font
+          font-weight: 400
+          color: $main
+          margin-bottom: 10px
+          font-size: 28px
+        p
+          font-size: 22px
+          font-weight: 300
+      &-num
+        min-width: 60px
+        display: block
+        color: $gray
+        font-size: 64px
+        line-height: 1.8
+        font-family: $font_title
+        font-weight: 400
+        opacity: .3
+
+@media (max-width: 1670px)
+  .ethaps
+    .title
+      margin-bottom: 10px
+      &::after
+        left: 120px
+        bottom: 20px
+    .subtitle
+      margin-bottom: 120px
+    &-left
+      width: 410px
+      img
+        width: 100%
+    &-right
+      width: calc(100% - 410px)
+      padding-left: 70px
+      &-item
+        margin-bottom: 20px
+        &-content
+          h3
+            font-size: 24px
+          p
+            font-size: 18px
+@media (max-width: 1200px)
+  .ethaps
+    &-right
+      padding-left: 40px
+        
+@media (max-width: 992px)
+  .ethaps
+    .container
+      flex-direction: column
+    &-right
+      padding-left: 0px
+      width: 100%
+    &-left
+      width: 100%
+      margin-bottom: 50px
+
+@media (max-width: 578px)
+  .ethaps
+    padding-bottom: 110px 
+    .title
+      margin-bottom: 10px
+      &::after
+        left: 120px
+        bottom: 20px
+    .subtitle
+      margin-bottom: 50px
+    &-left
+      margin-bottom: 50px
+      img
+        width: 100%
+    &-right
+      padding-left: 0px
+      &-item
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &-num
+          font-size: 50px
+          min-width: 40px
+        &-content
+          h3
+            font-size: 20px
+          p
+            font-size: 16px
+
+
+        

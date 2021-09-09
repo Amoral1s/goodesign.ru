@@ -1,0 +1,101 @@
+
+#thx
+  position: fixed
+  z-index: 300
+  top: 50%
+  left: 50%
+  display: none
+  transform: translate(-50%, -50%)
+  max-width: 95vw
+  max-height: 95vh
+  background: linear-gradient(260.92deg, #223268 8.78%, #324BA5 101.28%)
+  .wrap
+    color: #fff
+    padding: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    align-items: center
+    height: 600px
+    width: 600px
+    max-width: 100%
+    h2
+      text-align: center
+      display: block
+      width: 100%
+      font-size: 34px
+      margin-bottom: 50px
+    p
+      font-size: 16px
+      display: block
+      text-align: center
+      width: 100%
+      max-width: 400px
+
+.up-arr
+  position: fixed
+  bottom: 20px
+  left: 20px
+  height: 30px
+  width: 30px
+  z-index: 50
+  background-color: $main
+  border-radius: 5px
+  cursor: pointer
+  transition: .2s
+  display: none
+  &:hover
+    transition: .2s
+    background-color: $dark
+  &-wrap
+    height: 30px
+    width: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 5px
+    img
+      height: 30px
+      width: 20px
+      object-fit: contain
+    picture
+      width: 20px
+      height: 30px
+
+.wpcf7-response-output
+  display: none!important
+
+.overlay
+  position: fixed
+  z-index: 100
+  top: 0
+  width: 100%
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  background-color: rgba(#000, .4)
+  display: none
+
+.popup
+  width: 100%
+  max-width: 600px
+  max-height: 95vh
+  z-index: 150
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  &-img
+    max-width: 900px
+    max-height: 95vh
+    height: 100%
+    img
+      object-fit: contain
+      width: 100%
+      height: 100%
+      max-height: 100%
+      max-width: 100%
+      margin: auto

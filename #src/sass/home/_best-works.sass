@@ -1,0 +1,92 @@
+@import "../reset/_vars"
+
+.works
+  position: relative
+  z-index: 10
+  &-moar
+    display: none
+  .subtitle
+    margin-bottom: 85px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    flex-wrap: wrap
+    &-item
+      width: calc(50% - 20px)
+      margin-bottom: 60px
+      display: block
+      picture
+        display: block
+        width: 100%
+      img
+        width: 100%
+        height: 600px
+        object-fit: cover
+      p
+        font-size: 24px
+        margin-top: 30px
+        margin-bottom: 10px
+        max-width: 460px
+        color: #fff
+      .cat
+        display: block
+        color: $main
+        font-size: 20px
+
+@media (max-width: 1670px)
+  .works
+    .subtitle
+      margin-bottom: 50px
+    &-wrap
+      &-item
+        width: calc(50% - 20px)
+        margin-bottom: 40px
+        picture
+          display: block
+          width: 100%
+        img
+          width: 100%
+          height: 400px
+          object-fit: cover
+        p
+          font-size: 20px
+          margin-top: 20px
+          margin-bottom: 5px
+        .cat
+          font-size: 16px
+
+@media (max-width: 992px)
+  .works
+    .subtitle
+      margin-bottom: 50px
+    &-wrap
+      &-item
+        img
+          height: 250px
+        p
+          font-size: 16px
+        .cat
+          font-size: 14px
+@media (max-width: 578px)
+  .works
+    padding-bottom: 70px
+    &-moar
+      display: flex
+      justify-content: center
+      align-items: center
+      margin: auto
+      margin-top: 20px
+
+    .title
+      margin-bottom: 10px
+    .subtitle
+      margin-bottom: 40px
+    &-wrap
+      &-item
+        width: 100%
+        margin-bottom: 30px
+        display: none
+        &:nth-child(1),
+        &:nth-child(2)
+          display: block

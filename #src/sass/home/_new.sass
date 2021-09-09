@@ -1,0 +1,182 @@
+@import "../reset/_vars"
+
+.new
+  position: relative
+  .title
+    &::after
+      bottom: -10px
+      left: 140px
+  .subtitle
+    margin-bottom: 70px
+  &-bg
+    position: absolute
+    left: 0
+    top: 0
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &-right
+      width: 760px
+    &-left
+      width: calc(100% - 760px)
+      padding-right: 80px
+      padding-top: 30px
+      p
+        font-size: 22px
+        line-height: 1.8
+        margin-bottom: 35px
+      &-feat
+        margin-top: 120px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        position: relative
+        &-item
+          width: 50%  
+          display: flex
+          align-items: center
+          padding-right: 0px
+          width: 40%
+          &:last-child
+            width: 60%
+            padding-left: 90px
+            border-left: 2px solid $main
+          b
+            font-weight: 400
+            font-family: $font_title
+            color: #fff
+            font-size: 72px
+            margin-right: 35px
+          p
+            font-size: 24px
+            color: $main
+            line-height: 1.1
+            margin-bottom: 0
+
+@media (max-width: 1670px)
+  .new
+    .title
+      &::after
+        bottom: -20px
+        left: 240px
+    .subtitle
+      margin-bottom: 40px
+    &-wrap
+      &-right
+        width: 500px
+        img
+          height: 550px
+          width: 500px
+          object-fit: cover
+      &-left
+        width: calc(100% - 500px)
+        padding-right: 60px
+        padding-top: 0px
+        p
+          font-size: 18px
+          line-height: 1.6
+          margin-bottom: 25px
+        &-feat
+          margin-top: 30px
+          display: flex
+          justify-content: space-between
+          align-items: center
+          position: relative
+          &-item
+            width: 50%  
+            display: flex
+            align-items: center
+            padding-right: 0px
+            &:last-child
+              width: 60%
+              padding-left: 45px
+              border-left: 2px solid $main
+            b
+              margin-right: 25px
+              font-size: 50px
+            p
+              font-size: 18px
+              margin-bottom: 0
+
+@media (max-width: 1200px)
+  .new
+    &-wrap
+      &-right
+        width: 400px
+        img
+          height: 500px
+          width: 400px
+      &-left
+        width: calc(100% - 400px)
+        padding-right: 50px
+
+@media (max-width: 992px)
+  .new
+    padding-bottom: 100px
+    &-wrap
+      flex-direction: column-reverse
+      &-right
+        width: 100%
+        margin-bottom: 50px
+        img, picture
+          display: flex
+          height: 400px
+          width: 100%
+      &-left
+        width: 100%
+        padding-right: 50px
+        &-feat
+          justify-content: flex-start
+          &-item
+            width: 200px
+
+@media (max-width: 578px) 
+  .new
+    .title
+      &::after
+        left: 80px
+    &-wrap
+      &-left
+        padding-right: 0
+        p
+          font-size: 16px
+          margin-bottom: 20px  
+        &-feat
+          width: 100%
+          display: flex
+          justify-content: flex-start
+          &-item
+            width: max-content
+            margin: 0
+            padding: 0
+            padding-right: 35px
+            border-right: 2px solid $main
+            b
+              font-size: 40px
+              margin-right: 10px
+            p
+              font-size: 16px
+              margin-bottom: 0
+              line-height: 1.3
+              white-space: nowrap
+            &:last-child
+              margin: 0
+              padding: 0
+              padding-left: 35px
+              border: none
+@media (max-width: 360px) 
+  .new
+    &-wrap
+      &-left
+        &-feat
+          &-item
+            padding-right: 15px
+            b
+              font-size: 34px
+            p
+              font-size: 14px
+            &:last-child
+              padding-left: 15px
+
+

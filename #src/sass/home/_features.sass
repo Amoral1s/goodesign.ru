@@ -1,0 +1,125 @@
+@import "../reset/_vars"
+
+.features
+  position: relative
+  &-bg
+    position: absolute
+    right: 0
+    top: -200px
+    z-index: 1
+  .title-circle
+    &::after
+      bottom: -90px
+      left: 80px
+  &-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 5
+    &-left
+      display: flex
+      justify-content: space-between
+      align-items: stretch
+      flex-wrap: wrap
+      width: calc(100% - 443px)
+      padding-right: 120px 
+      &-item
+        width: calc(50% - 45px)
+        margin: 40px 0
+        h3
+          color: $main
+          font-size: 36px
+          font-weight: 400
+          margin-bottom: 20px
+        p
+          font-size: 22px
+          line-height: 1.6
+
+    &-right
+      width: 443px
+
+@media (max-width: 1670px)      
+  .features
+    .title-circle
+      &::after
+        bottom: -50px
+        left: 80px
+    &-wrap
+      &-left
+        width: calc(100% - 320px)
+        padding-right: 40px 
+        &-item
+          width: calc(50% - 45px)
+          margin: 20px 0
+          h3
+            font-size: 28px
+            margin-bottom: 10px
+          p
+            font-size: 18px
+            line-height: 1.6
+      &-right
+        width: 320px
+
+@media (max-width: 1200px)      
+  .features
+    &-wrap
+      &-left
+        width: calc(100% - 320px)
+        padding-right: 50px 
+        &-item
+          width: calc(50% - 15px)
+          margin: 15px 0
+          h3
+            font-size: 24px
+            margin-bottom: 10px
+          p
+            font-size: 18px
+            line-height: 1.6
+      &-right
+        width: 320px
+
+@media (max-width: 992px)      
+  .features
+    .subtitle
+      margin-bottom: 50px
+    &-wrap
+      flex-direction: column-reverse
+      align-items: center
+      &-left
+        width: 100%
+        padding-right: 50px 
+        margin-top: 50px
+        &-item
+          width: 100%
+          margin: 0 0 30px 0
+          h3
+            font-size: 24px
+            margin-bottom: 10px
+          p
+            font-size: 18px
+            line-height: 1.6
+      &-right
+        width: 100%
+        img, picture
+          display: flex
+          height: 300px
+          width: 100%
+          object-fit: cover
+
+@media (max-width: 578px)
+  .features
+    padding-bottom: 90px
+    &-wrap
+      &-left
+        padding-right: 0
+        &-item
+          margin-bottom: 30px
+          &:last-child
+            margin-bottom: 0
+          h3
+            font-size: 20px
+            margin-bottom: 10px
+          p
+            font-size: 16px
+            margin: 0

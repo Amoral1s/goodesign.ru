@@ -1,0 +1,152 @@
+@import "./reset/_vars"
+
+
+.footer
+  position: relative
+  z-index: 10
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &-col
+    display: block
+    width: calc(25% - 70px)
+    &-logo
+      margin-bottom: 30px
+      display: block
+    p
+      color: #fff
+      font-size: 20px
+      font-weight: 300
+    a.link
+      display: flex
+      font-size: 18px
+      align-items: center
+      margin-top: 20px
+      p
+        color: $main
+        margin-right: 10px
+      picture
+        display: flex
+        justify-content: center
+    a.phone
+      color: $main
+      margin-bottom: 10px
+      display: block
+      font-size: 24px
+    a.email
+      color: $main
+      margin-bottom: 10px
+      display: block
+      margin-top: 40px
+      font-size: 24px
+    b
+      color: $main
+      font-family: $font
+      font-weight: 500
+      display: block
+      margin-bottom: 30px
+      font-size: 24px
+    ul
+      li
+        a
+          color: #fff
+          display: block
+          margin-bottom: 25px
+          font-size: 22px
+          font-weight: 300
+          max-width: 220px
+    a
+      transition: .2s
+      &:hover
+        transition: .2s
+        color: $main
+    a.phone,
+    a.link,
+    a.email
+      &:hover
+        color: #fff
+        transition: .2s
+        p
+          color: #fff
+          transition: .2s
+
+@media (max-width: 1670px)
+  .footer
+    &-col
+      display: block
+      width: calc(25% - 60px)
+      p
+        font-size: 18px
+      a.phone
+        color: $main
+        margin-bottom: 10px
+        display: block
+        font-size: 20px
+      a.email
+        margin-top: 30px
+        font-size: 20px
+      b
+        margin-bottom: 25px
+        font-size: 20px
+      ul
+        li
+          a
+            margin-bottom: 20px
+            font-size: 18px
+
+@media (max-width: 1200px)
+  .footer
+    &-col
+      display: block
+      width: calc(25% - 30px)
+      p
+        font-size: 16px
+      a.phone
+        color: $main
+        margin-bottom: 10px
+        display: block
+        font-size: 20px
+      a.email
+        margin-top: 30px
+        font-size: 20px
+      b
+        margin-bottom: 25px
+        font-size: 20px
+      ul
+        li
+          a
+            margin-bottom: 20px
+            font-size: 18px
+
+@media (max-width: 992px)
+  .footer
+    .container
+      flex-direction: column
+      align-items: flex-start
+    &-col
+      display: block
+      width: 100%
+      margin-bottom: 50px
+      p
+        font-size: 16px
+      a.phone
+        color: $main
+        margin-bottom: 10px
+        display: block
+        font-size: 20px
+      a.email
+        margin-top: 30px
+        font-size: 20px
+      b
+        margin-bottom: 25px
+        font-size: 20px
+      ul
+        li
+          a
+            margin-bottom: 20px
+            font-size: 18px
+
+
+
+
